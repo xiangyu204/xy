@@ -23,6 +23,9 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
+            # 🔥 关键：给 mvnw 权限
+           - name: 권한 설정
+           run: chmod +x backend/mvnw
 
       # Maven으로 빌드 및 테스트 실행
       - name: Maven 빌드 & 테스트
